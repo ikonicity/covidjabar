@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import requests, schedule
+import requests #, schedule
 
 app = Flask (__name__)
 
@@ -11,7 +11,7 @@ def jabar():
     a=[ambil_dic]
     return a
 
-realtime_jabar = schedule.every(2).seconds.do(jabar)
+#realtime_jabar = schedule.every(2).seconds.do(jabar)
 
 #cek schedule
 #while True:
