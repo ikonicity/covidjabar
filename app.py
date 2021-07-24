@@ -4,6 +4,10 @@ import requests, json
 
 app = Flask (__name__)
 
+
+
+data_jabar = jabar()
+
 def jabar():
     api_url = 'https://api.kawalcorona.com/indonesia/provinsi'
     rstl= requests.get(api_url).json()
@@ -12,8 +16,6 @@ def jabar():
     a=[ambil_dic]
     return a
 
-
-data_jabar = jabar()
 
 @app.route('/')
 def index():
